@@ -4,10 +4,23 @@ import "./index.css";
 import "tachyons";
 
 class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
   render() {
     return (
-      <button className="square" onClick={() => console.log("clicked")}>
-        {this.props.value}
+      <button
+        className="square"
+        onClick={() =>
+          this.state.value
+            ? this.setState({ value: null })
+            : this.setState({ value: "X" })
+        }
+      >
+        {this.state.value}
       </button>
     );
   }
