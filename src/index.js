@@ -105,9 +105,13 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = "Winner: " + winner;
-      statusid.classList.toggle("thestatus");
+      statusid.classList.toggle("thestatuswin");
     } else {
       status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+    }
+
+    if (statusid && !winner) {
+      statusid.classList.remove("thestatuswin");
     }
 
     return (
@@ -121,10 +125,13 @@ class Game extends React.Component {
             />
           </div>
           <div className="game-info">
-            <div classname="thestatus" id="statusid">
+            <div className="thestatus" id="statusid">
               {status}
             </div>
             <ol>{moves}</ol>
+            <button onClick={() => statusid.classList.toggle("thestatuswin")}>
+              aaa
+            </button>
           </div>
         </div>
       </div>

@@ -71,7 +71,33 @@ button {
 }
 
 .thestatus {
-  color: #c4fb56;
+  color: rgb(255, 0, 157);
+}
+
+.thestatuswin {
   font-weight: bolder;
   letter-spacing: 1px;
+  animation-name: colorPalette;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  /* linear is enabled default, it’s not necessary to add it make it work but it can make your code more expressive */
+}
+@keyframes colorPalette {
+  0% {
+    color: #ee6055;
+  }
+  25% {
+    color: #60d394;
+  }
+  50% {
+    color: #aaf683;
+  }
+  75% {
+    color: #ffd97d;
+  }
+  100% {
+    color: #ff9b85;
+  }
 }
