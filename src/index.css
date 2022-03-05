@@ -11,6 +11,24 @@ li {
   margin: 5px;
 }
 
+.game-board {
+  position: relative;
+}
+.b1 {
+  position: relative;
+  top: 200px;
+  right: 180px;
+  width: 80px;
+  height: 60px;
+  border: 1px solid #aa03a9;
+}
+.b2 {
+  position: relative;
+  top: 200px;
+  right: 170px;
+  width: 80px;
+  height: 60px;
+}
 .board_div {
   border: 5px solid #521b34;
   padding: 10px;
