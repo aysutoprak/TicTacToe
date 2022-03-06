@@ -254,6 +254,12 @@ class Game extends React.Component {
           >
             PC
           </button>
+          <div className="infoBox">
+            <span className="bold">Normal :</span> Both sides are controlled by
+            the user input.
+            <span className="bold">PC :</span> X is done by the user, O is done
+            by the pc. Wait 2 seconds after putting X.
+          </div>
           <div className="game-info">
             <div className="thestatus" id="statusid">
               {status}
